@@ -1,5 +1,3 @@
-#Datums
-# 
 # cikls - for
 
 #for – ja ir zināms, cik reižu vai pa kādiem elementiem jāatkārto darbība
