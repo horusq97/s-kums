@@ -1,0 +1,96 @@
+1. uzdevums
+1.1.
+Laura,17,Rīga → kvalitatīvi
+???,-15,Mēness → nekvalitatīvi
+Jānis,18 → nepilnīgi dati
+1.2.
+Vārds	Vecums	Pilsēta
+Marta	16	Jelgava
+2. uzdevums
+2.1.
+ 
+skaitlis = input("Ievadi skaitli: ")
+ 
+if skaitlis.isdigit():
+    skaitlis = int(skaitlis)
+ 
+    if 1 <= skaitlis <= 10:
+        print("OK")
+    else:
+        print("Nav diapazonā")
+else:
+    print("Kļūda")
+ 
+ 
+2.2.
+Validācija palīdz novērst kļūdainus datus un programmas kļūdas.
+
+3. uzdevums
+3.1.
+ 
+with open("fails.csv", encoding="utf-8") as f:
+    next(f)
+ 
+    for rinda in f:
+        produkts, cena = rinda.strip().split(",")
+ 
+        if float(cena) > 2.00:
+            print(produkts)
+ 
+ 
+3.2.
+ 
+summa = 0
+ 
+with open("fails.csv", encoding="utf-8") as f:
+    next(f)
+ 
+    for rinda in f:
+        produkts, cena = rinda.strip().split(",")
+        summa += float(cena)
+ 
+print(summa)
+ 
+ 
+4. uzdevums
+4.1.
+ 
+rezultati = [7, 10, 5, 8, 9]
+ 
+rezultati.sort(reverse=True)
+print(rezultati)
+ 
+ 
+4.2.
+Piemēram, internetveikalos preces kārto pēc cenas.
+
+4.3.
+ 
+rezultati = [7, 10, 5, 8, 9]
+ 
+rezultati.sort(reverse=True)
+print(rezultati[:2])
+ 
+ 
+5. uzdevums
+5.1.
+ 
+skaitli = [5, 12, 15, 20]
+ 
+if 15 in skaitli:
+    print("Atrasts")
+ 
+ 
+5.2.
+Jo sistēmai jāpārbauda ļoti daudz datu, tāpēc meklēšana var aizņemt vairāk laika.
+
+5.3.
+ 
+with open("fails.csv", encoding="utf-8") as f:
+    next(f)
+ 
+    for rinda in f:
+       produkts, cena = rinda.strip().split(",")
+ 
+       if produkts == "Sula":
+           print("Atrasts")
