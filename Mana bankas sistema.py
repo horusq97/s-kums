@@ -24,6 +24,13 @@ class BankasKonts: #Objekta nosaukumu vienmēr raksta ar lielo burtu
     def uz_failu(self):
         return f"{self.ipasnieks},{self.numurs},{self.atlikums}\n"
 
+    def uz_failu(self):
+        with open("bankas_konts.csv", "w", encoding="utf-8") as f:
+            f.write("ipasnieks, konta_numurs, atlikums\n")
+            f.write(f"{self.ipasnieks},{self.numurs},{self.atlikums}\n")
+        
+       
+    
 #Pirmā objekta automašīna izveide
 konts1 = BankasKonts("Anna", "LV1234567890", 120)
 print("Konts 1 īpašnieks:", konts1.ipasnieks)
@@ -49,4 +56,6 @@ kont2.iznemt_naudu(150)  # Mēģinām izņemt 150 eiro no konta
 print("Konts 2 atlikums pēc izņemšanas:", kont2.atlikums)
 
 print(konts1.uz_failu())  # Izsaucam metodi uz_failu
+print(kont2.uz_failu())  
   
+
